@@ -1,0 +1,74 @@
+/*
+  PeerBridge custom multi-select style
+  Replaces default "plain" multi-select with elegant pill-based selections.
+*/
+
+.pb-multiselect {
+  background: #EEE5D3;
+  border: 1px solid #B7B7B7;
+  border-radius: 12px;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pb-multiselect__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 999px;
+  border: 1px solid #222052;
+  padding: 0.35rem 0.7rem;
+  background: #EEE5D3;
+  color: #222052;
+  font-size: 0.875rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.pb-multiselect__chip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.pb-multiselect__chip[aria-selected="true"] {
+  background: #D2B68A;
+  border-color: #D2B68A;
+  color: #222052;
+  font-weight: 600;
+}
+
+.pb-multiselect__dropdown {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #B7B7B7;
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 0.5rem;
+}
+
+.pb-multiselect__option {
+  border-radius: 8px;
+  padding: 0.5rem 0.625rem;
+  color: #000000;
+  cursor: pointer;
+}
+
+.pb-multiselect__option:hover,
+.pb-multiselect__option[aria-selected="true"] {
+  background: #D2B68A;
+  color: #222052;
+}
+
+@media (max-width: 768px) {
+  .pb-multiselect {
+    gap: 0.375rem;
+  }
+
+  .pb-multiselect__chip {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
